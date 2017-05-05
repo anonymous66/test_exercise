@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+Number of Girls: <input type="number" id="numbergirls" value= "5" > <br>
+
+Number of Boys:  <input type="number" id="numberboys" value= "10"> <br>
+
+Number of Groups:  <input type="number" id="numbersize" value= "2"> <br>
+
+<p>Click the button to change calcuate the number of group that can be formed.</p>
+
+<button onclick="myFunction()">Calculate</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+function myFunction() {    
+    var boys = parseInt (document.getElementById("numberboys").value) ;
+    var girls = parseInt (document.getElementById("numbergirls").value);
+     var gsize = parseInt (document.getElementById("numbersize").value);
+    
+    
+   
+    var arboys = [];
+    var argirls = [];
+    
+for(var i = 0; i <boys; i++) {
+    arboys[i] = 'boy';
+}
+
+
+ for(var i = 0; i < girls; i++) {
+    argirls[i] = 'girl';
+}
+
+
+
+if ( boys > girls)
+	{
+		alert ('nai');
+	}
+	else
+	{
+		alert ('oxi');
+	}
+
+    document.getElementById("demo2").innerHTML = boys;
+}
+</script>
+
+</body>
+</html>
