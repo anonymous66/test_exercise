@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+Number of Girls: <input type="number" id="numbergirls" value= "4" > <br>
+
+Number of Boys:  <input type="number" id="numberboys" value= "10"> <br>
+
+Number of Groups:  <input type="number" id="numbersize" value= "2"> <br>
+
+<p>Click the button to change calcuate the number of group that can be formed.</p>
+
+<button onclick="myFunction()">Calculate</button>
+
+<p id="demo"> </p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+function myFunction() {    
+    var boys = parseInt (document.getElementById("numberboys").value) ;
+    var girls = parseInt (document.getElementById("numbergirls").value);
+     var gsize = parseInt (document.getElementById("numbersize").value);
+    
+    
+   
+    var arboys = [];
+    var argirls = [];
+    
+for(var i = 0; i <boys; i++) {
+    arboys[i] = 'boy';
+}
+
+
+ for(var i = 0; i < girls; i++) {
+    argirls[i] = 'girl';
+}
+
+var counter= 0;
+
+var max = arboys.length;
+var counterb=0;
+var counterg=0;
+
+var maxg = argirls.length;
+if ( boys !=0   ){
+	if (girls!=0){
+        	 
+             if ( arboys.length % gsize == 0 && argirls.length % gsize == 0 )
+             { 
+        
+             				//for boys
+             				while (max>=0) {
+         				   if (max>=gsize)
+                           {
+                           
+                           
+                           var group="";
+                            for (var i = 1; i <=gsize; i++){
+                            group += "boy ";                        
+                            }
+                            counterb++;
+             				console.log (group);
+                            
+                            }
+             				max = max - gsize;
+            				}                         
+                         //for girls
+                            while (maxg>=0) {
+         				   if (maxg>=gsize)
+                           {
+                           
+                           var groupg="";
+                           
+             				//alert ("girl");
+                            
+                            for (var i = 1; i <=gsize; i++){
+                            groupg += "girl ";                        
+                            }
+                            
+                            counterg++;
+                            
+                            	console.log (groupg);
+                            
+                            }
+                            
+                           
+             				maxg= maxg - gsize;
+            				}
+                        
+                            
+                            
+                            
+                            
+             }
+             
+             if ( arboys.length % gsize == 0 && argirls.length % gsize == 1 ){
+            //for boys
+             				while (max>=0) {
+         				   if (max>=gsize)
+                           {
+                           
+                           
+                           var group="";
+                            for (var i = 1; i <=gsize; i++){
+                            group += "boy ";                        
+                            }
+                            counterb++;
+             				console.log (group);
+                            
+                            }
+             				max = max - gsize;
+            				}                         
+                         //for girls
+                            while (maxg>=0) {
+         				   if (maxg>=gsize)
+                           {
+                           
+                           var groupg="";
+                           
+             				//alert ("girl");
+                            
+                            for (var i = 1; i <=gsize; i++){
+                            groupg += "girl ";                        
+                            }
+                            
+                            counterg++;
+                            
+                            	console.log (groupg);
+                            
+                            }
+                            
+                           
+             				maxg= maxg - gsize;
+            				}
+             }
+             
+              if ( arboys.length % gsize == 1 && argirls.length % gsize == 0 )
+             { 
+             //for boys
+             				while (max>=0) {
+         				   if (max>=gsize)
+                           {
+                           
+                           
+                           var group="";
+                            for (var i = 1; i <=gsize; i++){
+                            group += "boy ";                        
+                            }
+                            counterb++;
+             				console.log (group);
+                            
+                            }
+             				max = max - gsize;
+            				}                         
+                         //for girls
+                            while (maxg>=0) {
+         				   if (maxg>=gsize)
+                           {
+                           
+                           var groupg="";
+                           
+             				//alert ("girl");
+                            
+                            for (var i = 1; i <=gsize; i++){
+                            groupg += "girl ";                        
+                            }
+                            
+                            counterg++;
+                            
+                            	console.log (groupg);
+                            
+                            }
+                            
+                           
+             				maxg= maxg - gsize;
+            				}
+             
+             }
+             
+              if ( arboys.length % gsize == 1 && argirls.length % gsize == 1 )
+             {
+           //for boys
+             				while (max>=0) {
+         				   if (max>=gsize)
+                           {
+                           
+                           
+                           var group="";
+                            for (var i = 1; i <=gsize; i++){
+                            group += "boy ";                        
+                            }
+                            counterb++;
+             				console.log (group);
+                            
+                            }
+             				max = max - gsize;
+            				}                         
+                         //for girls
+                            while (maxg>=0) {
+         				   if (maxg>=gsize)
+                           {
+                           
+                           var groupg="";
+                           
+             				//alert ("girl");
+                            
+                            for (var i = 1; i <=gsize; i++){
+                            groupg += "girl ";                        
+                            }
+                            
+                            counterg++;
+                            
+                            	console.log (groupg);
+                            
+                            }
+                            
+                           
+             				maxg= maxg - gsize;
+            				}
+             }
+     }
+       
+        
+}
+
+    //document.getElementById("demo2").innerHTML = boys;
+}
+</script>
+
+</body>
+</html>
