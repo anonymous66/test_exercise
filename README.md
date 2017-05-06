@@ -1,4 +1,4 @@
-# test_exercise INSTUCTIONS on how to run it
+# test_exercise INSTUCTIONS on how to Execute the code
 
 
 
